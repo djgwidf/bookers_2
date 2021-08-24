@@ -1,0 +1,17 @@
+<h3>books#index</h3>
+<h3>このページに他者を含めたすべての本の一覧をつくる</h3>
+<div class= "container">
+  <div class= "row">
+    <div class= "col-xs-3">
+
+<% if @book.errors %> 
+ <% @book.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+ <% end %>
+ <% end %>
+
+    <%= render 'users/userinfo', user: @user %>
+    <%= render 'books/newbook', book: @book %>
+    </div>
+  </div>
+</div>
