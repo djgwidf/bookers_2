@@ -1,6 +1,4 @@
 <p id = "notice"><%= notice %></p>
-<h3>Users#show</h3>
-<h3>ログイン後のホーム画面</h3>
 <div class="container px-5 px-sm-0">
    <div class="row">
       <div class="col-md-3">
@@ -17,12 +15,12 @@
              <th colspan= "3"></th>
              </tr>
             </thead>
-            
+
             <% @books.each do |book| %>
              <%= link_to user_path(@user.id) do %>
               <tbody>
                 <tr>
-                 <td><%= attachment_image_tag book.user, :image, :fill, 20, 20, fallback: "no_image.jpg",size:'20x20',format: 'no_image.jpg' %></td>
+                 <td><%= attachment_image_tag book.user, :profile_image, :fill, 20, 20, fallback: "no_image.jpg",size:'20x20',format: 'no_image.jpg' %></td>
                    <% end %>
                    <td><%=link_to book.title, book_path(book.id)%></td>
                    <td><%= book.body %></td>

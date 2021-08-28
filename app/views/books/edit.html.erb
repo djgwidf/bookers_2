@@ -13,7 +13,7 @@
            <% end %>
 
   		    <h1>Editing Book</h1>
-  		      <%= form_for(@book, url: book_path(@book.id)) do |f| %>
+  		      <%= form_with model:@book, local:true do |f| %>
 
            <div class="form-group">
              <label for="book_title">Title</label>
